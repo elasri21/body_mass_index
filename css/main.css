@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  margin: 0 30px;
+}
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 80px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    margin: 0 60px !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+header {
+  padding: 20px 0 70px 0;
+  position: relative;
+}
+@media (min-width: 922px) {
+  header::before {
+    width: 80% !important;
+    border-radius: 0 0 20px 0;
+  }
+  header .container .body-mass > div {
+    width: calc(50% - 15px) !important;
+  }
+}
+header::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #d7e7fe;
+}
+header .container {
+  position: relative;
+}
+header .container .logo {
+  margin-bottom: 20px;
+}
+header .container .logo img {
+  width: 50px;
+}
+header .container .body-mass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+header .container .body-mass > div {
+  width: 100%;
+}
+header .container .body-mass .info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+header .container .body-mass .info p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+}
+header .container .body-mass .calculator {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #c8c8c8;
+}
+header .container .body-mass .calculator h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+header .container .body-mass .calculator form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header .container .body-mass .calculator form > div {
+  width: 100%;
+}
+header .container .body-mass .calculator form .radio-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header .container .body-mass .calculator form .radio-btns label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(50% - 5px);
+}
+header .container .body-mass .calculator form .radio-btns label span {
+  font-size: .8rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: capitalize;
+}
+header .container .body-mass .calculator form .fields {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+header .container .body-mass .calculator form .fields label {
+  display: block;
+  width: calc(50% - 5px);
+  position: relative;
+}
+header .container .body-mass .calculator form .fields label input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid #c8c8c8;
+  background: none;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 10px 15px;
+}
+header .container .body-mass .calculator form .fields label span {
+  font-size: .7rem;
+  color: #808080;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+header .container .body-mass .calculator form .fields label span.unit {
+  font-size: .8rem;
+  color: #0000ff;
+  font-weight: 700;
+  position: absolute;
+  right: 15px;
+  bottom: 11px;
+}
+header .container .body-mass .calculator form button {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #3460f7;
+  border-radius: 6px 50px 50px 6px;
+  min-height: 93px;
+}
+header .container .body-mass .calculator form button .initial {
+  text-align: left;
+}
+header .container .body-mass .calculator form button .initial h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+header .container .body-mass .calculator form button .initial p {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+header .container .body-mass .calculator form button .success {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  header .container .body-mass .calculator form button .success .bmi, header .container .body-mass .calculator form button .success .remark {
+    width: 100% !important;
+  }
+}
+header .container .body-mass .calculator form button .success .bmi {
+  width: calc(40% - 20px);
+}
+header .container .body-mass .calculator form button .success .bmi p {
+  font-size: .9rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+header .container .body-mass .calculator form button .success .bmi h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+header .container .body-mass .calculator form button .success .remark {
+  width: 60%;
+}
+header .container .body-mass .calculator form button .success .remark p {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.2rem;
+  letter-spacing: .4px;
+}
+header .container .body-mass .calculator form button .hide {
+  display: none;
+}
+
+main .container .result-meaning {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 20px 0 50px 0;
+}
+@media (min-width: 922px) {
+  main .container .result-meaning .image {
+    width: 40% !important;
+  }
+  main .container .result-meaning .info {
+    width: calc(60% - 40px) !important;
+  }
+}
+main .container .result-meaning .image {
+  width: 100%;
+}
+main .container .result-meaning .image img {
+  display: block;
+  max-width: 100%;
+}
+main .container .result-meaning .info {
+  width: 100%;
+}
+main .container .result-meaning .info h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+main .container .result-meaning .info p {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #808080;
+  line-height: 1.3rem;
+}
+main .container .good-hubits {
+  background-image: linear-gradient(to right, #ffffff, #e7f5fe, #d7e7fe);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+@media (min-width: 922px) {
+  main .container .good-hubits .box {
+    width: calc(33.33% - 20px) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 921px) {
+  main .container .good-hubits .box:not(:last-of-type) {
+    width: calc(50% - 10px) !important;
+  }
+}
+@media (max-width: 767px) {
+  main .container .good-hubits .box {
+    align-items: center;
+  }
+  main .container .good-hubits .box h3, main .container .good-hubits .box p {
+    text-align: center;
+  }
+}
+main .container .good-hubits .box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .container .good-hubits .box h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000000;
+}
+main .container .good-hubits .box p {
+  font-size: .8rem;
+  color: #808080;
+  line-height: 1.2rem;
+}
+main .container .limitations {
+  margin: 40px auto;
+  max-width: 500px;
+  text-align: center;
+}
+main .container .limitations h2 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+main .container .limitations p {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #808080;
+  line-height: 1.3rem;
+  letter-spacing: .3px;
+}
+main .container .miscellaneous {
+  padding: 0 0 60px 0;
+  display: grid;
+  grid-gap: 20px;
+}
+@media (min-width: 768px) {
+  main .container .miscellaneous {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .container .miscellaneous .gender {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+  main .container .miscellaneous .muscle {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  main .container .miscellaneous .age {
+    grid-column: 4/6;
+    grid-row: 2/3;
+  }
+  main .container .miscellaneous .pregnancy {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  main .container .miscellaneous .race {
+    grid-column: 3/5;
+    grid-row: 3/4;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  main .container .miscellaneous {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .container .miscellaneous .gender {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  main .container .miscellaneous .muscle {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  main .container .miscellaneous .age {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main .container .miscellaneous .pregnancy {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  main .container .miscellaneous .race {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+main .container .miscellaneous .box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #c8c8c8;
+}
+main .container .miscellaneous .box .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .container .miscellaneous .box .title img {
+  vertical-align: middle;
+}
+main .container .miscellaneous .box .title h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: capitalize;
+}
+main .container .miscellaneous .box p {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #808080;
+  line-height: 1.3rem;
+}
+
+footer {
+  margin: 30px 0;
+}
+footer .container {
+  text-align: center;
+  font-size: .9rem;
+  color: #000000;
+}
+footer .container a {
+  font-weight: 600;
+  color: #808080;
+  font-size: 1.1rem;
+  transition: .3s linear;
+}
+footer .container a:hover {
+  color: #587dff;
+}
+
+/*# sourceMappingURL=main.css.map */

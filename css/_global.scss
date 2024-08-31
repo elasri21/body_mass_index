@@ -1,0 +1,40 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $size;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $family;
+}
+
+.container {
+    @media (min-width: 1024px) {
+        margin: 0 80px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        margin: 0 60px !important;
+    }
+    margin: 0 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+

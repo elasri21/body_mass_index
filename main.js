@@ -53,7 +53,7 @@ form.addEventListener("submit", function(e) {
     let minWeight = 0;
     let maxWeight = 0;
     e.preventDefault();
-    if (!height.value || !weight.value) {
+    if (!height.value || !weight.value || isNaN(height.value) || isNaN(weight.value)) {
         submitBtn.innerHTML = `
         <div class="initial">
             <p>Please enter your height and weight</p>
@@ -67,6 +67,8 @@ form.addEventListener("submit", function(e) {
             </div>
             `;
         }, 1500);
+        weight.value = "";
+        height.value = "";
         return;
     } else {
         if (metric.checked) {
@@ -95,8 +97,8 @@ form.addEventListener("submit", function(e) {
                 </p>
             </div>
         </div>`;
-        weight.value = "";
-        height.value = "";
     }
+    weight.value = "";
+    height.value = "";
 });
 

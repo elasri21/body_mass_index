@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [click here](https://github.com/elasri21/body_mass_index)
+- Live Site URL: [click here](https://elasri21.github.io/body_mass_index/)
 
 ### Built with
 
